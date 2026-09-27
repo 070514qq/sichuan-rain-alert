@@ -123,7 +123,7 @@ def collect(now):
             result["products"][kind] = chosen
             if kind == "1h":
                 result["history"].append(chosen)
-                for dt in [t for t in available if t < datetime.fromisoformat(chosen["observedAt"])][:5]:
+                for dt in [t for t in available if t < datetime.fromisoformat(chosen["observedAt"])][:23]:
                     try:
                         result["history"].append(product(kind, dt, now))
                     except Exception:
@@ -147,7 +147,7 @@ def collect(now):
     result["forecastStatus"] = result["cityData"]["status"]
     result["alertsStatus"] = result["alertData"]["status"]
     result["message"] = "中央气象台真实实况、城市逐三小时预测与四川暴雨预警发布记录；请分别查看来源时刻。"
-    if result["errors"] and result["status"] == "ok":
+    if (result["errors"] or result['cityData']['status'] != 'ok') and result["status"] == "ok":
         result["status"] = "partial"
     return result
 

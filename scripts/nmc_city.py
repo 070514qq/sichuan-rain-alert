@@ -5,6 +5,10 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
 from html.parser import HTMLParser
 from urllib.parse import urlencode
+try:
+    from .regions import build_regions, SOURCE as REGION_SOURCE
+except ImportError:
+    from regions import build_regions, SOURCE as REGION_SOURCE
 
 BASE = "https://www.nmc.cn"
 BJT = timezone(timedelta(hours=8))
@@ -148,6 +152,9 @@ def city_record(city, fetch, numeric, now):
             humidity = None
         out.update(status="ok", observation={"observedAt": observed.isoformat(), "temperatureC": temp,
                                             "humidityPct": humidity}, forecast=None)
+        out['pastHours'] = [{'at':parse_time(r['time']).isoformat(), 'rainMm':numeric(r.get('rain1h'))}
+                            for r in data.get('passedchart', []) if r.get('time')]
+        out['pastHours'].sort(key=lambda r:r['at'])
         predict = data.get("predict", {})
         details = predict.get("detail", [])
         if not details:
@@ -161,7 +168,7 @@ def city_record(city, fetch, numeric, now):
                            "daily": [{"date": d["date"], "rainMm": numeric(d.get("precipitation")),
                                       "day": d.get("day", {}).get("weather", {}).get("info"),
                                       "night": d.get("night", {}).get("weather", {}).get("info")}
-                                     for d in details[:3]]}
+                                     for d in details[:7]]}
     except Exception:
         # A failed forecast does not suppress valid observations collected above.
         out["forecastError"] = "城市预报获取失败或格式不匹配"
@@ -172,12 +179,13 @@ def collect_cities(fetch, numeric, now):
     catalog = json.loads(fetch(BASE + "/rest/province/ASC"))
     if not isinstance(catalog, list):
         raise ValueError("Invalid Sichuan catalog")
-    selected = [c for c in catalog if c.get("province") == "四川省" and c.get("city") in CITY_NAMES]
+    selected = [c for c in catalog if c.get("province") == "四川省"]
     if not selected:
         raise ValueError("No Sichuan cities")
     with ThreadPoolExecutor(max_workers=4) as pool:
         records = list(pool.map(lambda city: city_record(city, fetch, numeric, now), selected))
     return {"status": "ok" if all(r.get("forecast") for r in records) else "partial", "cities": records,
+            "regions":build_regions(selected), "regionSource":REGION_SOURCE,
             "missingCities": [name for name in CITY_NAMES if name not in {c["name"] for c in records}],
             "sourceUrl": BASE + "/publish/forecast/ASC/chengdu.html"}
 
