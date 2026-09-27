@@ -13,6 +13,11 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.request import Request, urlopen
 
+try:
+    from .nmc_city import collect_cities, collect_alerts
+except ImportError:
+    from nmc_city import collect_cities, collect_alerts
+
 BJT = timezone(timedelta(hours=8))
 BASE = "https://www.nmc.cn"
 PAGES = {"24h": BASE + "/publish/observations/24hour-precipitation.html",
@@ -129,7 +134,21 @@ def collect(now):
     result["history"].sort(key=lambda item: item["observedAt"])
     if result["products"]:
         result["status"] = "partial" if result["errors"] else "ok"
-    result["message"] = "已获取中央气象台降水实况；本来源不提供预测开始时间、持续时间或地方预警。" if result["products"] else "降水实况获取失败，当前数据无法确认。"
+    result["cityData"] = {"status": "error", "cities": []}
+    result["alertData"] = {"status": "error", "items": []}
+    try:
+        result["cityData"] = collect_cities(fetch, numeric, now)
+    except Exception:
+        result["errors"].append("四川城市预测接口获取失败")
+    try:
+        result["alertData"] = collect_alerts(fetch, now)
+    except Exception:
+        result["errors"].append("四川暴雨预警列表获取失败")
+    result["forecastStatus"] = result["cityData"]["status"]
+    result["alertsStatus"] = result["alertData"]["status"]
+    result["message"] = "中央气象台真实实况、城市逐三小时预测与四川暴雨预警发布记录；请分别查看来源时刻。"
+    if result["errors"] and result["status"] == "ok":
+        result["status"] = "partial"
     return result
 
 

@@ -6,10 +6,14 @@
 
 GitHub Actions 按每十五分钟调度采集并部署 Pages，可能受 GitHub 排队和源端更新延迟影响。页面显示采集时间与观测时间，过期、失败和缺失数据均有明确提示。
 
-**本来源不提供预测开始时间、持续时间或四川地方暴雨预警。相应栏目明确显示未提供；未出现的站点不补零，不据此判断安全。**
+另接入中央气象台21个四川城市的气温、湿度、未来三天概况及逐三小时预报，以及四川暴雨预警发布列表。城市选择与降水观测站选择独立，避免套用其他城市预报。
+
+预计开始、结束和持续时间是逐三小时预报中首段连续降雨的区间推算，非官方精确时刻。源发布时间异常、过期、未知天气或边界不足时不编造估算。预警按官方原等级和发布时间显示；发布记录的解除/变更状态未核验，空列表不表示安全。
 
 - [24小时降水实况来源](https://www.nmc.cn/publish/observations/24hour-precipitation.html)
 - [1小时降水实况来源](https://www.nmc.cn/publish/observations/hourly-precipitation.html)
+- [城市预报来源（成都）](https://www.nmc.cn/publish/forecast/ASC/chengdu.html)
+- [官方预警信号列表](https://www.nmc.cn/publish/alarm.html)
 - [模拟数据演示版](https://070514qq.github.io/sichuan-rain-alert/demo.html)
 
 ## 本地验证
