@@ -1,0 +1,416 @@
+{
+  "schemaVersion": 2,
+  "isDemo": false,
+  "fetchedAt": "2026-09-27T11:19:55.483870+08:00",
+  "source": {
+    "name": "中央气象台 · 降水实况",
+    "url": "https://www.nmc.cn/publish/observations/24hour-precipitation.html"
+  },
+  "status": "ok",
+  "products": {
+    "24h": {
+      "kind": "24h",
+      "observedAt": "2026-09-27T10:00:00+08:00",
+      "sourcePeriod": "09月26日11时-27日10时",
+      "sourceDescription": "来源于2418个国家级气象观测站",
+      "dataUrl": "https://www.nmc.cn/product/realmap/pre_24h/2026092710.json",
+      "stale": false,
+      "stations": [
+        {
+          "key": "松潘|songpan",
+          "name": "松潘",
+          "valueMm": 11.8,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/songpan.html"
+        },
+        {
+          "key": "红原|hongyuan",
+          "name": "红原",
+          "valueMm": 7.3,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/hongyuan.html"
+        },
+        {
+          "key": "达川|dachuan",
+          "name": "达川",
+          "valueMm": 5.9,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/dachuan.html"
+        },
+        {
+          "key": "大竹|dazhu",
+          "name": "大竹",
+          "valueMm": 4.5,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/dazhu.html"
+        },
+        {
+          "key": "阿坝|aba",
+          "name": "阿坝",
+          "valueMm": 4.2,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/aba.html"
+        },
+        {
+          "key": "平武|pingwu",
+          "name": "平武",
+          "valueMm": 3.1,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/pingwu.html"
+        },
+        {
+          "key": "邛崃|zuozuo1",
+          "name": "邛崃",
+          "valueMm": 3.0,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/zuozuo1.html"
+        },
+        {
+          "key": "绵竹|mianzhu",
+          "name": "绵竹",
+          "valueMm": 2.9,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/mianzhu.html"
+        },
+        {
+          "key": "都江堰|dujiangyan",
+          "name": "都江堰",
+          "valueMm": 2.7,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/dujiangyan.html"
+        },
+        {
+          "key": "宣汉|xuanhan",
+          "name": "宣汉",
+          "valueMm": 2.6,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/xuanhan.html"
+        },
+        {
+          "key": "邻水|linshui",
+          "name": "邻水",
+          "valueMm": 2.1,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/linshui.html"
+        },
+        {
+          "key": "开江|kaijiang",
+          "name": "开江",
+          "valueMm": 2.0,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/kaijiang.html"
+        },
+        {
+          "key": "万源|wanyuan",
+          "name": "万源",
+          "valueMm": 1.2,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/wanyuan.html"
+        },
+        {
+          "key": "崇州|chongzhou",
+          "name": "崇州",
+          "valueMm": 1.1,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/chongzhou.html"
+        },
+        {
+          "key": "天全|tianquan",
+          "name": "天全",
+          "valueMm": 1.0,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/tianquan.html"
+        },
+        {
+          "key": "峨眉山|emeishan",
+          "name": "峨眉山",
+          "valueMm": 0.9,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/emeishan.html"
+        },
+        {
+          "key": "青川|qingchuan",
+          "name": "青川",
+          "valueMm": 0.5,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/qingchuan.html"
+        },
+        {
+          "key": "东兴区|neijiang",
+          "name": "东兴区",
+          "valueMm": 0.4,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/neijiang.html"
+        },
+        {
+          "key": "筠连|zuolian",
+          "name": "筠连",
+          "valueMm": 0.4,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/zuolian.html"
+        },
+        {
+          "key": "丹棱|danleng",
+          "name": "丹棱",
+          "valueMm": 0.3,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/danleng.html"
+        },
+        {
+          "key": "石渠|shiqu",
+          "name": "石渠",
+          "valueMm": 0.2,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/shiqu.html"
+        },
+        {
+          "key": "安县|anzhou",
+          "name": "安县",
+          "valueMm": 0.1,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/anzhou.html"
+        },
+        {
+          "key": "广元|guangyuan",
+          "name": "广元",
+          "valueMm": 0.1,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/guangyuan.html"
+        },
+        {
+          "key": "剑阁|jiange",
+          "name": "剑阁",
+          "valueMm": 0.1,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/jiange.html"
+        },
+        {
+          "key": "九寨沟|jiuzhaigou",
+          "name": "九寨沟",
+          "valueMm": 0.1,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/jiuzhaigou.html"
+        },
+        {
+          "key": "乐至|lezhi",
+          "name": "乐至",
+          "valueMm": 0.1,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/lezhi.html"
+        },
+        {
+          "key": "名山|mingshan",
+          "name": "名山",
+          "valueMm": 0.1,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/mingshan.html"
+        },
+        {
+          "key": "兴文|xingwen",
+          "name": "兴文",
+          "valueMm": 0.1,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/xingwen.html"
+        },
+        {
+          "key": "荥经|zuojing",
+          "name": "荥经",
+          "valueMm": 0.1,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/zuojing.html"
+        }
+      ]
+    },
+    "1h": {
+      "kind": "1h",
+      "observedAt": "2026-09-27T10:00:00+08:00",
+      "sourcePeriod": "09月27日10时",
+      "sourceDescription": "来源于2418个国家级气象观测站",
+      "dataUrl": "https://www.nmc.cn/product/realmap/pre_1h/2026092710.json",
+      "stale": false,
+      "stations": [
+        {
+          "key": "达川|dachuan",
+          "name": "达川",
+          "valueMm": 3.9,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/dachuan.html"
+        },
+        {
+          "key": "宣汉|xuanhan",
+          "name": "宣汉",
+          "valueMm": 2.4,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/xuanhan.html"
+        },
+        {
+          "key": "开江|kaijiang",
+          "name": "开江",
+          "valueMm": 0.7,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/kaijiang.html"
+        },
+        {
+          "key": "筠连|zuolian",
+          "name": "筠连",
+          "valueMm": 0.2,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/zuolian.html"
+        },
+        {
+          "key": "峨眉山|emeishan",
+          "name": "峨眉山",
+          "valueMm": 0.1,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/emeishan.html"
+        }
+      ]
+    }
+  },
+  "history": [
+    {
+      "kind": "1h",
+      "observedAt": "2026-09-27T05:00:00+08:00",
+      "sourcePeriod": "09月27日05时",
+      "sourceDescription": "来源于2418个国家级气象观测站",
+      "dataUrl": "https://www.nmc.cn/product/realmap/pre_1h/2026092705.json",
+      "stale": true,
+      "stations": [
+        {
+          "key": "邻水|linshui",
+          "name": "邻水",
+          "valueMm": 1.3,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/linshui.html"
+        }
+      ]
+    },
+    {
+      "kind": "1h",
+      "observedAt": "2026-09-27T06:00:00+08:00",
+      "sourcePeriod": "09月27日06时",
+      "sourceDescription": "来源于2418个国家级气象观测站",
+      "dataUrl": "https://www.nmc.cn/product/realmap/pre_1h/2026092706.json",
+      "stale": true,
+      "stations": [
+        {
+          "key": "达川|dachuan",
+          "name": "达川",
+          "valueMm": 0.2,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/dachuan.html"
+        },
+        {
+          "key": "红原|hongyuan",
+          "name": "红原",
+          "valueMm": 0.2,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/hongyuan.html"
+        },
+        {
+          "key": "都江堰|dujiangyan",
+          "name": "都江堰",
+          "valueMm": 0.1,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/dujiangyan.html"
+        }
+      ]
+    },
+    {
+      "kind": "1h",
+      "observedAt": "2026-09-27T07:00:00+08:00",
+      "sourcePeriod": "09月27日07时",
+      "sourceDescription": "来源于2418个国家级气象观测站",
+      "dataUrl": "https://www.nmc.cn/product/realmap/pre_1h/2026092707.json",
+      "stale": true,
+      "stations": [
+        {
+          "key": "大竹|dazhu",
+          "name": "大竹",
+          "valueMm": 1.9,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/dazhu.html"
+        },
+        {
+          "key": "达川|dachuan",
+          "name": "达川",
+          "valueMm": 0.1,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/dachuan.html"
+        },
+        {
+          "key": "邻水|linshui",
+          "name": "邻水",
+          "valueMm": 0.1,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/linshui.html"
+        },
+        {
+          "key": "平武|pingwu",
+          "name": "平武",
+          "valueMm": 0.1,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/pingwu.html"
+        }
+      ]
+    },
+    {
+      "kind": "1h",
+      "observedAt": "2026-09-27T08:00:00+08:00",
+      "sourcePeriod": "09月27日08时",
+      "sourceDescription": "来源于2418个国家级气象观测站",
+      "dataUrl": "https://www.nmc.cn/product/realmap/pre_1h/2026092708.json",
+      "stale": true,
+      "stations": [
+        {
+          "key": "大竹|dazhu",
+          "name": "大竹",
+          "valueMm": 2.6,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/dazhu.html"
+        },
+        {
+          "key": "平武|pingwu",
+          "name": "平武",
+          "valueMm": 0.1,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/pingwu.html"
+        }
+      ]
+    },
+    {
+      "kind": "1h",
+      "observedAt": "2026-09-27T09:00:00+08:00",
+      "sourcePeriod": "09月27日09时",
+      "sourceDescription": "来源于2418个国家级气象观测站",
+      "dataUrl": "https://www.nmc.cn/product/realmap/pre_1h/2026092709.json",
+      "stale": true,
+      "stations": [
+        {
+          "key": "达川|dachuan",
+          "name": "达川",
+          "valueMm": 1.7,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/dachuan.html"
+        },
+        {
+          "key": "开江|kaijiang",
+          "name": "开江",
+          "valueMm": 1.2,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/kaijiang.html"
+        },
+        {
+          "key": "九寨沟|jiuzhaigou",
+          "name": "九寨沟",
+          "valueMm": 0.1,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/jiuzhaigou.html"
+        },
+        {
+          "key": "万源|wanyuan",
+          "name": "万源",
+          "valueMm": 0.1,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/wanyuan.html"
+        }
+      ]
+    },
+    {
+      "kind": "1h",
+      "observedAt": "2026-09-27T10:00:00+08:00",
+      "sourcePeriod": "09月27日10时",
+      "sourceDescription": "来源于2418个国家级气象观测站",
+      "dataUrl": "https://www.nmc.cn/product/realmap/pre_1h/2026092710.json",
+      "stale": false,
+      "stations": [
+        {
+          "key": "达川|dachuan",
+          "name": "达川",
+          "valueMm": 3.9,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/dachuan.html"
+        },
+        {
+          "key": "宣汉|xuanhan",
+          "name": "宣汉",
+          "valueMm": 2.4,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/xuanhan.html"
+        },
+        {
+          "key": "开江|kaijiang",
+          "name": "开江",
+          "valueMm": 0.7,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/kaijiang.html"
+        },
+        {
+          "key": "筠连|zuolian",
+          "name": "筠连",
+          "valueMm": 0.2,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/zuolian.html"
+        },
+        {
+          "key": "峨眉山|emeishan",
+          "name": "峨眉山",
+          "valueMm": 0.1,
+          "sourceUrl": "https://www.nmc.cn/publish/forecast/ASC/emeishan.html"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "forecastStatus": "not_provided",
+  "alertsStatus": "not_provided",
+  "message": "已获取中央气象台降水实况；本来源不提供预测开始时间、持续时间或地方预警。"
+}

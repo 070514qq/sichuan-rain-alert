@@ -1,0 +1,42 @@
+name: Update weather and deploy Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: '7,22,37,52 * * * *'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: weather-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate weather data handling
+        run: python3 -m unittest discover -s tests -v
+      - name: Prepare static website
+        run: |
+          mkdir -p _site/data
+          cp index.html demo.html style.css live.js .nojekyll _site/
+      - name: Fetch configured weather source
+        run: python3 scripts/collect_weather.py _site/data/weather.json
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v4
